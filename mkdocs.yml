@@ -16,6 +16,7 @@ theme:
 
 repo_url: https://github.com/ASFHyP3
 repo_name: ASF HyP3
+edit_uri: ''
 
 extra:
   social:
@@ -28,28 +29,36 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 3
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
 
 nav:
   - Home: index.md
   - Getting started: getting_started.md
   - Using HyP3:
-      - Vertex: vertex.md
-      - SDK: sdk.md
-      - API: api.md
+      - Vertex: using/vertex.md
+      - SDK: using/sdk.md
+      - API: using/api.md
   - Products:
       - Overview: products.md
+      - Digital Elevation Models: dems.md
       - Product guides:
-          - RTC Product Guide: guides/rtc_product.md
+          - RTC Product Guide: guides/rtc_product_guide.md
           - RTC ATBD: guides/rtc_atbd.md
   - Other tools:
-      - GIS Tools: gis_tools.md
-      - hyp3lib: hyp3lib.md
+      - ArcGIS Toolbox: tools/arcgis_toolbox.md
+      # - hyp3lib: tools/hyp3lib.md
   - Plugins:
       - Overview: plugins.md
-      - HyP3 GAMMA: plugins/gamma.md
-      - HyP3 autoRIFT: plugins/autoRIFT.md
+      # - HyP3 GAMMA: plugins/gamma.md
+      # - HyP3 autoRIFT: plugins/autoRIFT.md
   - Contributing: contributing.md
   - Code of Conduct: CODE_OF_CONDUCT.md
 
 plugins:
   - gitsnippet
+  - mkdocstrings:
+      handlers:
+          python:
+            inherited_members: True
