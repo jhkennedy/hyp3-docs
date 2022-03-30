@@ -1,4 +1,4 @@
-name: hyp3-docs
+name: mkdocs-asf-theme
 channels:
   - conda-forge
   - nodefaults
